@@ -3,9 +3,10 @@ import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import styles from '../styles/Home.module.css'
 
-//const inter = Inter({ subsets: ['latin'] })
-
 export default function Home() {
+
+  const author = process.env.NEXT_PUBLIC_PROJECT_NAME;
+
   return (
     <>
       <Head>
@@ -16,6 +17,7 @@ export default function Home() {
       </Head>
       <div>
         <h1 className="text-5xl font-bold">NextJS Project</h1>
+        <p className="font-bold">{author}</p>
       </div>
     </>
   )
